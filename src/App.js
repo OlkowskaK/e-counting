@@ -24,7 +24,7 @@ function App() {
           </div>
         </div>
         <div className="HeroImg">
-          <img src={praw} className="Hero-img" alt="prawo" />
+          <img src={praw} alt="prawo" />
         </div>
       </section>
 

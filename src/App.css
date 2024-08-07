@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #ffffff;
 }
 
 .App {
@@ -15,17 +15,91 @@
   max-width: 180px;
   height: auto;
 }
-
-.HeroImg {
-  min-height: 400px;
-  width: auto;
-  position: relative;
-}
-
 .imgLogo {
   padding: 20px 0;
   text-align: center;
 }
+/* _________________HEROSECTION___________________________________ */
+.HeroSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  min-height: 400px;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.HeroImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.HeroImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0);
+  z-index: 1;
+}
+
+.HeroContent {
+  position: relative;
+  z-index: 2;
+}
+
+.HeroContent h1 {
+  font-size: 2rem;
+  margin: 0 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+/* Responsywność */
+@media (max-width: 1200px) {
+  .HeroContent h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .HeroContent h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroContent h1 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .HeroContent h1 {
+    font-size: 1.2rem;
+    margin: 0 10px;
+  }
+}
+/* ____________________________________________________ */
+
 .buttonForm {
   background-color: #6ebb4b;
   color: #ffffff;
