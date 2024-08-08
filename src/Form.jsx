@@ -24,51 +24,65 @@ const ContactFormSection = () => {
   return (
     <section className="contact-form-section">
       <form onSubmit={handleSubmit}>
-        <label>
-          Imię:
-          <input
-            type="text"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Nazwisko:
-          <input
-            type="text"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          E-mail:
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Telefon:
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Wiadomość:
-          <textarea
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-          ></textarea>
-        </label>
-        <button type="submit">Wyślij</button>
+        <title>Skontaktuj się z nami!</title>
+        <div className="inputField">
+          <label>
+            Imię:
+            <input
+              type="text"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <div className="inputField">
+          <label>
+            Nazwisko:
+            <input
+              type="text"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <div className="inputField">
+          <label>
+            E-mail:
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <div className="inputField">
+          <label>
+            Telefon:
+            <input
+              type="tel"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
+        <div className="inputField">
+          <label>
+            Wiadomość:
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
+          </label>
+        </div>
+
+        <button className="buttonForm" type="submit">
+          Wyślij
+        </button>
       </form>
     </section>
   );
