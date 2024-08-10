@@ -2,10 +2,10 @@
 
 .buttonForm {
   background-color: #6ebb4b;
-  color: #ffffff;
+  font-family: Sans-serif;
+  color: #f3f4f6;
   border-radius: 3px;
-  padding: 10px 20px;
-  border: none;
+  padding: 30px 40px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
@@ -20,13 +20,14 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: #ffffff;
+  background-color: #f3f4f6;
 }
 
 .App {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   text-align: center;
+  color: #06060a;
 }
 .App-logo {
   max-width: 180px;
@@ -42,10 +43,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  min-height: 400px;
+  height: 55vh;
+  min-height: 300px;
   text-align: center;
-  color: #ffffff;
+  color: #f3f4f6;
   overflow: hidden;
   margin-bottom: 50px;
 }
@@ -123,8 +124,9 @@
   max-width: 800px;
   height: auto;
   text-align: center;
-  margin: 20px auto;
+  margin: 60px auto;
   padding: 10px;
+  font-family: "Muli", sans-serif;
 }
 
 .ProductContent {
@@ -142,6 +144,8 @@
   text-align: center;
 }
 .ProductContent p {
+  color: #292940;
+  font-family: "Muli", sans-serif;
   font-size: 22px;
   text-transform: initial;
   line-height: 1.2;
@@ -150,73 +154,117 @@
 
 /* _________________FeatureSection___________________________ */
 .FeatureSection {
-  margin-bottom: 50px;
-  max-width: 800px;
   height: auto;
-  margin: 20px auto;
-  padding: 10px;
-}
-.Future-section-main {
-  margin-bottom: 50px;
-  max-width: 800px;
-  height: auto;
-  text-align: center;
-  margin: 20px auto;
-  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  margin: 0px auto;
   padding: 10px;
   background-color: #6ebb4b;
 }
-.features {
-  margin-bottom: 50px;
-  max-width: 800px;
-  height: auto;
+.FeatureSection h2 {
+  color: #f3f4f6;
+  font-weight: bolder;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  line-height: 1.3;
   text-align: center;
-  margin: 20px auto;
-  padding: 10px;
+}
+.Future-section-main {
+  display: flex;
+  justify-content: space-between; /* Rozmieszcza kolumny równomiernie */
+  flex-wrap: wrap; /* Pozwala na zawijanie kolumn na mniejszych ekranach */
+  margin-top: 20px;
+}
+.features {
+  display: flex;
+  flex-direction: row; /* Ustawienie elementów w jednym wierszu */
+  justify-content: space-between; /* Rozmieszcza kolumny równomiernie */
+  width: 100%;
+  gap: 30px;
+  margin: 30px;
 }
 .feature {
-  margin-bottom: 50px;
-  max-width: 800px;
-  height: auto;
-  text-align: center;
-  margin: 20px auto;
-  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #ffffff;
+  flex: 1; /* Równa szerokość kolumn */
+  min-width: 250px; /* Minimalna szerokość kolumny */
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: left;
+}
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Responsywność */
+@media (max-width: 992px) {
+  .feature {
+    flex: 1 1 calc(50% - 20px); /* Dwie kolumny na średnich ekranach */
+  }
+}
+
+@media (max-width: 576px) {
+  .feature {
+    flex: 1 1 100%; /* Jedna kolumna na małych ekranach */
+  }
 }
 .consultations {
   max-width: 800px;
   height: auto;
   text-align: center;
   margin: 20px auto;
-  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
   padding: 10px;
   justify-content: space-between; /* Równomierne rozmieszczenie kolumn */
   flex-wrap: wrap; /* Umożliwia zawijanie kolumn na mniejszych ekranach */
   gap: 10px; /* Odstęp między kolumnami */
-  background-color: #ffffff;
 }
-
+.consultations h3 {
+  color: #f3f4f6;
+  font-weight: bolder;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  line-height: 1.3;
+  text-align: center;
+}
+.consultations h4 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.consultations p {
+  font-size: 1rem;
+  color: #666;
+}
 .consultations ul {
   display: flex;
   flex: 1; /* Umożliwia każdej liście zajęcie równomiernej przestrzeni */
   margin: 0;
   padding: 0;
   list-style: none; /* Usuń stylowanie listy */
-  text-align: left; /* Wyrównaj tekst do lewej, jeśli jest potrzebne */
+  text-align: left;
+  gap: 20px;
+  margin: 30px;
+  justify-content: space-between; /* Rozmieszcza kolumny równomiernie */
+  width: 100%;
 }
 
 .consultations li {
-  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 10px;
   margin-right: 20px; /* Odstęp między elementami listy */
-  text-align: center;
+  text-align: left;
   min-height: 200px;
-  background-color: #6ebb4b;
+  background-color: #f9f9f9;
+  padding: 20px;
 }
 
 /* Responsywność */
@@ -231,16 +279,7 @@
   }
 }
 /* _________________WhySection___________________________ */
-.WhySection {
-  margin-bottom: 50px;
-  max-width: 800px;
-  height: auto;
-  text-align: center;
-  margin: 20px auto;
-  padding: 10px;
-}
-
-.WhySection h2 {
+.reasons {
   color: #6ebb4b;
   font-weight: bolder;
   font-size: 23px;
@@ -250,10 +289,5 @@
   font-style: normal;
   line-height: 1.3;
   text-align: center;
-}
-.WhySection p {
-  font-size: 22px;
-  text-transform: initial;
-  line-height: 1.2;
-  font-weight: 800;
+  margin: 70px auto;
 }

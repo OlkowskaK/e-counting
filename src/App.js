@@ -4,6 +4,7 @@ import "./App.css";
 import ContactFormSection from "./Form";
 import TestimonialSlider from "./Slider";
 import SliderPeople from "./Sliderpeople";
+import WhyChooseUs from "./WhyUs";
 
 function App() {
   return (
@@ -49,15 +50,24 @@ function App() {
           <div className="features">
             <div className="feature">
               <h3>Sporządzanie opinii prawniczej</h3>
-              <p>-TEKST-</p>
+              <p>
+                Dokładna analiza i interpretacja przepisów dla wsparcia Twoich
+                decyzji biznesowych.
+              </p>
             </div>
             <div className="feature">
               <h3>Sporządzanie dokumentacji prawnej</h3>
-              <p>-TEKST-</p>
+              <p>
+                Profesjonalnie przygotowane dokumenty zgodne z aktualnymi
+                przepisami prawa.
+              </p>
             </div>
             <div className="feature">
               <h3>Indywidualne usługi doradztwa prawnego</h3>
-              <p>-TEKST-</p>
+              <p>
+                Dostosowane do Twoich potrzeb doradztwo, które pomoże Ci
+                rozwiązać złożone problemy prawne.
+              </p>
             </div>
           </div>
           <div className="consultations">
@@ -65,15 +75,24 @@ function App() {
             <ul>
               <li>
                 <h4>Interpretacja przepisów prawnych</h4>
-                <p>-TEKST-</p>
+                <p>
+                  Precyzyjna wykładnia przepisów, która pomoże uniknąć błędów i
+                  nieporozumień w prowadzeniu działalności.
+                </p>
               </li>
               <li>
                 <h4>Interpretacja prawa pracy</h4>
-                <p>-TEKST-</p>
+                <p>
+                  Wsparcie w zrozumieniu przepisów prawa pracy, aby zapewnić
+                  zgodność z regulacjami i ochrona praw pracowników.
+                </p>
               </li>
               <li>
                 <h4>Interpretacja prawa gospodarczego</h4>
-                <p>-TEKST-</p>
+                <p>
+                  Praktyczne doradztwo w zakresie prawa gospodarczego, aby Twoja
+                  firma działała zgodnie z obowiązującymi normami.
+                </p>
               </li>
             </ul>
           </div>
@@ -81,8 +100,10 @@ function App() {
       </section>
 
       <section className="WhySection">
-        <h2>Dlaczego warto wybrać e-counting?</h2>
-        <p>Dołącz do naszego grona ponad 150 zadowolonych klientów!</p>
+        <WhyChooseUs />
+        <div className="reasons">
+          Dołącz do naszego grona ponad 150 zadowolonych klientów!
+        </div>
         <button className="buttonForm">CHCĘ Z WAMI WSPÓŁPRACOWAĆ</button>
         <div className="testimonials-slider">
           <TestimonialSlider slides={SliderPeople} />
