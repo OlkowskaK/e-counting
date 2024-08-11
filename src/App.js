@@ -101,10 +101,12 @@ function App() {
 
       <section className="WhySection">
         <WhyChooseUs />
-        <div className="reasons">
-          Dołącz do naszego grona ponad 150 zadowolonych klientów!
+        <div className="reasonsButton">
+          <div className="reasons">
+            Dołącz do naszego grona ponad 150 zadowolonych klientów!
+          </div>
+          <button className="buttonForm">CHCĘ Z WAMI WSPÓŁPRACOWAĆ</button>
         </div>
-        <button className="buttonForm">CHCĘ Z WAMI WSPÓŁPRACOWAĆ</button>
         <div className="testimonials-slider">
           <TestimonialSlider slides={SliderPeople} />
         </div>

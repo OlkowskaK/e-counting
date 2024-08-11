@@ -1,26 +1,88 @@
-.contact-form-section input:invalid {
-  max-width: 800px;
+.contact-form-section {
   height: auto;
-  margin: 20px auto;
-  box-shadow: 0 0px 7px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  padding: 10px;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url("./kontakt.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.FormAll {
+  color: #f3f4f6;
+  font-family: "Muli", sans-serif;
+  line-height: 1.2;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+}
+.FormTitle {
+  color: #f3f4f6;
+  font-weight: bolder;
+  font-size: 23px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-family: "Muli", sans-serif;
+  font-style: normal;
+  line-height: 1.3;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.inputField {
+  margin-bottom: 15px;
+  margin-right: 20px;
+  max-width: 479px;
+}
+
+.inputField label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.inputField input,
+textarea {
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+}
+
+.inputRow .inputField {
+  flex: 1;
+}
+
 /* _________________Button___________________________ */
 
-.buttonForm {
+.buttonForm1 {
   background-color: #6ebb4b;
   color: #f3f4f6;
+  font-family: Sans-serif;
   border-radius: 3px;
-  padding: 20px 30px;
+  padding: 30px 40px;
   font-weight: bold;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  max-width: fit-content;
+  align-items: center;
 }
 
-.buttonForm:active {
+.buttonForm1:active {
   transform: scale(0.98);
 }
-/* ____________________________________________ */
+
+@media (max-width: 600px) {
+  .inputRow {
+    flex-direction: column;
+  }
+}
