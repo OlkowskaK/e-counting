@@ -41,7 +41,12 @@ function App() {
           </p>
         </div>
 
-        <button className="buttonForm">CHCĘ SKORZYSTAĆ Z WASZEJ WIEDZY</button>
+        <button
+          className="buttonForm"
+          onClick={() => (window.location.href = "#contact")}
+        >
+          CHCĘ SKORZYSTAĆ Z WASZEJ WIEDZY
+        </button>
       </section>
 
       <section className="FeatureSection">
@@ -105,7 +110,12 @@ function App() {
           <div className="reasons">
             Dołącz do naszego grona ponad 150 zadowolonych klientów!
           </div>
-          <button className="buttonForm">CHCĘ Z WAMI WSPÓŁPRACOWAĆ</button>
+          <button
+            className="buttonForm"
+            onClick={() => (window.location.href = "#contact")}
+          >
+            CHCĘ Z WAMI WSPÓŁPRACOWAĆ
+          </button>
         </div>
         <div className="testimonials-slider">
           <TestimonialSlider slides={SliderPeople} />

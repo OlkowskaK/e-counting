@@ -3,6 +3,7 @@
 .buttonForm {
   background-color: #6ebb4b;
   font-family: Sans-serif;
+  font-weight: bold;
   color: #f3f4f6;
   border-radius: 3px;
   border: none;
@@ -14,6 +15,7 @@
 .buttonForm:active {
   transform: scale(0.98);
 }
+
 /* ____________________________________________ */
 
 .header {
@@ -30,15 +32,19 @@
   text-align: center;
   color: #06060a;
 }
+
 .App-logo {
   max-width: 180px;
   height: auto;
 }
+
 .imgLogo {
   padding: 20px 0;
   text-align: center;
 }
+
 /* _________________HEROSECTION___________________________________ */
+
 .HeroSection {
   position: relative;
   display: flex;
@@ -93,31 +99,6 @@
   font-weight: bold;
 }
 
-/* Responsywność */
-@media (max-width: 1200px) {
-  .HeroContent h1 {
-    font-size: 1.8rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .HeroContent h1 {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .HeroContent h1 {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .HeroContent h1 {
-    font-size: 1.2rem;
-    margin: 0 10px;
-  }
-}
 /* _________________ProductSection___________________________ */
 
 .ProductSection {
@@ -133,6 +114,7 @@
 .ProductContent {
   text-align: center;
 }
+
 .ProductContent h2 {
   color: #6ebb4b;
   font-weight: bolder;
@@ -144,6 +126,7 @@
   line-height: 1.3;
   text-align: center;
 }
+
 .ProductContent p {
   color: #292940;
   font-family: "Muli", sans-serif;
@@ -154,6 +137,7 @@
 }
 
 /* _________________FeatureSection___________________________ */
+
 .FeatureSection {
   height: auto;
   margin: 0 auto;
@@ -163,6 +147,7 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .FeatureSection h2 {
   color: #f3f4f6;
   font-weight: bolder;
@@ -174,29 +159,38 @@
   line-height: 1.3;
   text-align: center;
 }
+
 .Future-section-main {
   display: flex;
   justify-content: space-between; /* Rozmieszcza kolumny równomiernie */
   flex-wrap: wrap; /* Pozwala na zawijanie kolumn na mniejszych ekranach */
   margin-top: 20px;
+  max-width: 100%;
+  overflow: hidden;
 }
+
 .features {
   display: flex;
-  flex-direction: row; /* Ustawienie elementów w jednym wierszu */
-  justify-content: space-between;
-  width: 100%;
-  gap: 30px;
-  margin: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Równomierne rozmieszczenie kolumn */
+  gap: 20px; /* Odstęp między kolumnami */
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 10px;
 }
+
 .feature {
-  flex: 1; /* Równa szerokość kolumn */
-  min-width: 250px; /* Minimalna szerokość kolumny */
+  flex: 1 1 calc(33.333% - 20px); /* Trzy kolumny na dużych ekranach */
   background-color: #f9f9f9;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
   text-align: left;
+  min-height: 200px;
 }
+
 .feature h3 {
   font-size: 1.5rem;
   margin-bottom: 30px;
@@ -205,20 +199,11 @@
 .feature p {
   font-size: 1rem;
   color: #666;
+  word-wrap: break-word;
 }
 
-/* Responsywność */
-@media (max-width: 992px) {
-  .feature {
-    flex: 1 1 calc(50% - 20px); /* Dwie kolumny na średnich ekranach */
-  }
-}
+/* _________________Consultations___________________________ */
 
-@media (max-width: 576px) {
-  .feature {
-    flex: 1 1 100%; /* Jedna kolumna na małych ekranach */
-  }
-}
 .consultations {
   max-width: 800px;
   height: auto;
@@ -229,6 +214,7 @@
   flex-wrap: wrap; /* Zawijanie kolumn na mniejszych ekranach */
   gap: 10px; /* Odstęp między kolumnami */
 }
+
 .consultations h3 {
   color: #f3f4f6;
   font-weight: bolder;
@@ -240,14 +226,17 @@
   line-height: 1.3;
   text-align: center;
 }
+
 .consultations h4 {
   font-size: 1.5rem;
   margin-bottom: 30px;
 }
+
 .consultations p {
   font-size: 1rem;
   color: #666;
 }
+
 .consultations ul {
   display: flex;
   flex: 1; /* Umożliwia każdej liście zajęcie równomiernej przestrzeni */
@@ -271,18 +260,25 @@
   padding: 20px;
 }
 
-/* Responsywność */
-@media (max-width: 768px) {
-  .consultations {
-    flex-direction: column; /* Ustawienie kolumn w pionie na mniejszych ekranach */
-    align-items: center; /* Wyśrodkowanie kolumn */
-  }
+/* _________________Accordion___________________________ */
 
-  .consultations ul {
-    width: 100%; /* Ustawienie szerokości 100% na mniejszych ekranach */
-  }
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, font-size 0.3s ease-out;
 }
+
+.accordion-content.active {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in, font-size 0.3s ease-in;
+}
+
+.accordion-content p {
+  font-size: 1rem;
+}
+
 /* _________________WhySection___________________________ */
+
 .reasons {
   color: #6ebb4b;
   font-weight: bolder;
@@ -295,6 +291,164 @@
   text-align: center;
   margin: 70px auto;
 }
+
 .reasonsButton {
   margin: 60px auto;
+}
+
+/* _________________RESPONSYWNOŚĆ___________________________ */
+
+@media (max-width: 1200px) {
+  .HeroContent h1,
+  .ProductContent h2,
+  .consultations h3,
+  .reasons {
+    font-size: 1.8rem;
+  }
+
+  .feature,
+  .consultations ul,
+  .Future-section-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .accordion-content {
+    transition: max-height 0.5s ease-in, font-size 0.3s ease-in;
+  }
+
+  .accordion-content.active {
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  .accordion-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .HeroContent h1,
+  .ProductContent h2,
+  .consultations h3,
+  .reasons {
+    font-size: 1.6rem;
+  }
+
+  .feature,
+  .consultations li,
+  .Future-section-main {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .feature {
+    margin: 15px 0;
+  }
+
+  .buttonForm {
+    padding: 20px 30px;
+  }
+
+  .HeroSection {
+    height: 50vh;
+  }
+
+  .HeroImg img {
+    object-fit: cover;
+  }
+
+  .accordion-content {
+    transition: max-height 0.5s ease-in, font-size 0.3s ease-in;
+  }
+
+  .accordion-content.active {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .accordion-content p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroContent h1,
+  .ProductContent h2,
+  .consultations h3,
+  .reasons {
+    font-size: 1.4rem;
+  }
+
+  .feature,
+  .consultations li,
+  .Future-section-main {
+    flex: 1 1 100%;
+  }
+
+  .feature {
+    margin: 15px 0;
+  }
+
+  .buttonForm {
+    padding: 15px 20px;
+  }
+
+  .HeroSection {
+    height: 45vh;
+  }
+
+  .HeroImg img {
+    object-fit: cover;
+  }
+
+  .accordion-content {
+    transition: max-height 0.5s ease-in, font-size 0.3s ease-in;
+  }
+
+  .accordion-content.active {
+    max-height: 250px;
+    overflow: auto;
+  }
+
+  .accordion-content p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .HeroContent h1,
+  .ProductContent h2,
+  .consultations h3,
+  .reasons {
+    font-size: 1.2rem;
+    margin: 0 10px;
+  }
+
+  .feature,
+  .consultations li {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .HeroSection {
+    height: 40vh;
+  }
+
+  .buttonForm {
+    padding: 10px 20px;
+  }
+
+  .accordion-content {
+    transition: max-height 0.5s ease-in, font-size 0.3s ease-in;
+  }
+
+  .accordion-content.active {
+    max-height: 200px;
+    overflow: auto;
+  }
+
+  .accordion-content p {
+    font-size: 0.6rem;
+  }
 }

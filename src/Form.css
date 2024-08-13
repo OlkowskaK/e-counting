@@ -81,8 +81,74 @@ textarea {
   transform: scale(0.98);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1200px) {
+  .FormTitle {
+    font-size: 21px;
+    letter-spacing: 4px;
+  }
+
   .inputRow {
-    flex-direction: column;
+    gap: 30px;
+  }
+
+  .buttonForm1 {
+    padding: 25px 35px;
+  }
+}
+@media (max-width: 992px) {
+  .FormTitle {
+    font-size: 19px;
+    letter-spacing: 3px;
+  }
+
+  .inputRow {
+    gap: 20px;
+  }
+
+  .buttonForm1 {
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 768px) {
+  .FormTitle {
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+
+  .inputField {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    max-width: 100%;
+  }
+
+  .inputRow {
+    flex-direction: column; /* Przełączanie na układ pionowy */
+    gap: 10px;
+  }
+
+  .buttonForm1 {
+    padding: 15px 25px;
+  }
+}
+@media (max-width: 576px) {
+  .FormTitle {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 15px auto;
+  }
+
+  .inputField {
+    margin-bottom: 8px;
+    margin-right: 5px;
+  }
+
+  .inputRow {
+    gap: 5px;
+  }
+
+  .buttonForm1 {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
   }
 }
